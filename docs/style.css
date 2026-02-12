@@ -1,226 +1,273 @@
 /* ============================================
-   Design Curator Cards — Docs Landing Page
-   Swiss-grid inspired, calm, functional
+   Design Curator Cards — Docs
+   International Typographic Style
+   After Müller-Brockmann: mathematical grid,
+   Helvetica, asymmetric layout, objective form
    ============================================ */
 
+/* --- Typographic Scale (base 16 px, ratio ~1.333) --- */
 :root {
-  --color-bg: #fafaf8;
-  --color-surface: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-secondary: #555;
-  --color-accent: #c0392b;
-  --color-border: #e0e0e0;
-  --color-tag-bg: #f0f0ec;
-  --color-code-bg: #f5f5f0;
-  --color-warning-bg: #fff8e1;
-  --color-warning-border: #f9a825;
-  --color-start-bg: #e8f5e9;
-  --color-start-border: #43a047;
+  --step-0: 1rem;        /* 16 px — body */
+  --step-1: 1.333rem;    /* 21.3 px */
+  --step-2: 1.777rem;    /* 28.4 px */
+  --step-3: 2.369rem;    /* 37.9 px */
+  --step-4: 3.157rem;    /* 50.5 px */
+
+  /* Colour: black, white, one signal red */
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --grey-100: #f5f5f5;
+  --grey-200: #e5e5e5;
+  --grey-400: #999;
+  --grey-600: #555;
+  --red: #e20613;            /* Swiss signal red */
+
+  /* Grid */
+  --col: 60px;
+  --gutter: 24px;
+  --margin: clamp(24px, 5vw, 80px);
+  --max-width: 960px;        /* 12-col × 60 + 11-gut × 24 */
+
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-mono: "SF Mono", "Fira Code", "Fira Mono", Menlo, monospace;
-  --max-width: 960px;
-  --grid-gap: 2rem;
+  --font-mono: "SF Mono", "Fira Code", Menlo, monospace;
 }
 
-/* Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  font-size: 16px;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: var(--font-body);
-  color: var(--color-text);
-  background: var(--color-bg);
-  line-height: 1.65;
-  padding: 2rem 1.5rem;
+  font-weight: 400;
+  font-size: var(--step-0);
+  line-height: 1.5;
+  color: var(--black);
+  background: var(--white);
+  margin: 0;
+  padding: 0;
 }
 
-/* Layout */
+/* --- Page Grid --- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 0 var(--margin);
 }
 
-/* Typography */
+/* Vertical rhythm: 96 px top margin before content */
+.container > :first-child { margin-top: 96px; }
+
+/* --- Typography — Müller-Brockmann hierarchy --- */
 h1 {
-  font-size: 2rem;
+  font-size: var(--step-4);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
 }
 
 h2 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--color-text);
+  font-size: var(--step-1);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-top: 72px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--black);
 }
 
 h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--step-0);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 12px;
 }
 
 p {
-  margin-bottom: 1rem;
-  max-width: 65ch;
+  max-width: 60ch;
+  margin-bottom: 18px;
 }
 
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* --- Links — red, no underline until hover --- */
 a {
-  color: var(--color-accent);
+  color: var(--red);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
 }
 
 a:hover {
-  border-bottom-color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Start Here Box */
+/* --- Subtitle --- */
+.subtitle {
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: var(--grey-600);
+  margin-bottom: 48px;
+  max-width: 50ch;
+  line-height: 1.4;
+}
+
+/* --- Start Here — heavy black border, no decoration --- */
 .start-box {
-  background: var(--color-start-bg);
-  border: 2px solid var(--color-start-border);
-  border-radius: 4px;
-  padding: 1.5rem 2rem;
-  margin: 2rem 0;
+  border: 3px solid var(--black);
+  padding: 36px 36px 24px;
+  margin: 48px 0 60px;
 }
 
 .start-box h2 {
   margin-top: 0;
-  border-bottom: none;
+  margin-bottom: 18px;
   padding-bottom: 0;
-  color: var(--color-start-border);
-  font-size: 1.2rem;
+  border-bottom: none;
+  font-size: var(--step-0);
+  color: var(--black);
 }
 
 .start-box ol {
-  padding-left: 1.5rem;
+  padding-left: 24px;
+  margin-bottom: 0;
 }
 
 .start-box li {
-  margin-bottom: 0.35rem;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-/* Subtitle */
-.subtitle {
-  font-size: 1.1rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-/* Section Grid */
+/* --- Section Grid — 2 columns, strict gutter --- */
 .section-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--grid-gap);
-  margin: 2rem 0;
+  gap: var(--gutter);
+  margin: 36px 0;
 }
 
-/* Cards */
+/* --- Cards (info blocks) --- */
 .card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: 1.5rem;
+  border-top: 3px solid var(--black);
+  padding: 24px 0 12px;
+  background: transparent;
 }
 
 .card h3 {
   margin-top: 0;
+  margin-bottom: 8px;
 }
 
-/* Example Curator Card */
+.card ul {
+  padding-left: 18px;
+}
+
+.card li {
+  margin-bottom: 4px;
+}
+
+/* --- Curator Card (example exhibit) --- */
 .curator-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-accent);
-  border-radius: 4px;
-  padding: 1.5rem 2rem;
-  margin: 1.5rem 0;
+  border-top: 3px solid var(--red);
+  padding: 30px 0 18px;
+  margin: 36px 0 48px;
+  background: transparent;
 }
 
 .curator-card h3 {
+  font-size: var(--step-1);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -0.01em;
   margin-top: 0;
-  font-size: 1.15rem;
+  margin-bottom: 18px;
 }
 
 .curator-card .card-body {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
+  font-size: var(--step-0);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  max-width: 60ch;
 }
 
 .curator-card .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.75rem 0;
+  gap: 8px;
+  margin: 18px 0;
 }
 
 .curator-card .tag {
-  background: var(--color-tag-bg);
-  padding: 0.2rem 0.6rem;
-  border-radius: 3px;
-  font-size: 0.8rem;
   font-family: var(--font-mono);
-  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--grey-100);
+  padding: 4px 10px;
+  border: 1px solid var(--grey-200);
 }
 
 .curator-card .links,
 .curator-card .confusion,
 .curator-card .accountability {
   font-size: 0.9rem;
-  margin: 0.5rem 0;
-  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 8px 0;
+  color: var(--grey-600);
 }
 
 .curator-card .confusion {
   font-style: italic;
 }
 
-/* Warning Box */
+.curator-card .accountability {
+  border-top: 1px solid var(--grey-200);
+  padding-top: 12px;
+  margin-top: 18px;
+}
+
+/* --- Warning Box --- */
 .warning {
-  background: var(--color-warning-bg);
-  border-left: 4px solid var(--color-warning-border);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 0 4px 4px 0;
-  font-size: 0.95rem;
+  border-left: 4px solid var(--red);
+  padding: 18px 24px;
+  margin: 36px 0;
+  background: var(--grey-100);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .warning strong {
-  color: var(--color-warning-border);
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-/* Code blocks */
+/* --- Code --- */
 code {
   font-family: var(--font-mono);
-  background: var(--color-code-bg);
-  padding: 0.15rem 0.4rem;
-  border-radius: 3px;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
+  background: var(--grey-100);
+  padding: 2px 6px;
 }
 
 pre {
-  background: var(--color-code-bg);
-  padding: 1.25rem;
-  border-radius: 4px;
+  background: var(--grey-100);
+  border-left: 3px solid var(--grey-200);
+  padding: 24px;
   overflow-x: auto;
-  margin: 1rem 0;
-  font-size: 0.88rem;
+  margin: 18px 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -229,15 +276,14 @@ pre code {
   padding: 0;
 }
 
-/* Prompt block */
+/* --- Prompt Block --- */
 .prompt-block {
-  background: var(--color-code-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: 1.25rem;
-  margin: 1rem 0;
+  background: var(--grey-100);
+  border-left: 3px solid var(--black);
+  padding: 24px;
+  margin: 18px 0;
   font-family: var(--font-mono);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   line-height: 1.6;
   white-space: pre-wrap;
   position: relative;
@@ -245,86 +291,80 @@ pre code {
 
 .prompt-block .label {
   display: inline-block;
-  background: var(--color-text);
-  color: var(--color-bg);
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.15rem 0.5rem;
-  border-radius: 2px;
-  margin-bottom: 0.75rem;
+  background: var(--black);
+  color: var(--white);
   font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 3px 8px;
+  margin-bottom: 12px;
 }
 
-/* Tables */
+/* --- Tables — Müller-Brockmann: rules top and bottom, no vertical lines --- */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
-  font-size: 0.95rem;
+  margin: 24px 0;
+  font-size: 0.9rem;
 }
 
 th, td {
   text-align: left;
-  padding: 0.6rem 1rem;
-  border-bottom: 1px solid var(--color-border);
+  padding: 10px 16px 10px 0;
+  border-bottom: 1px solid var(--grey-200);
+  vertical-align: top;
 }
 
 th {
-  font-weight: 600;
-  font-size: 0.8rem;
+  font-weight: 700;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-secondary);
+  letter-spacing: 0.1em;
+  color: var(--grey-400);
+  border-bottom: 2px solid var(--black);
 }
 
-/* Lists */
+tr:last-child td {
+  border-bottom: 2px solid var(--black);
+}
+
+/* --- Lists --- */
 ul, ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
+  padding-left: 20px;
+  margin-bottom: 18px;
 }
 
 li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-/* Footer */
+/* --- Footer --- */
 .footer {
-  margin-top: 4rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
+  margin-top: 96px;
+  padding: 24px 0;
+  border-top: 3px solid var(--black);
+  font-size: 0.8rem;
+  color: var(--grey-600);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-/* Responsive */
+/* --- Responsive: single column below 640 px --- */
 @media (max-width: 640px) {
-  body {
-    padding: 1rem;
-  }
+  :root { --margin: 20px; }
 
-  h1 {
-    font-size: 1.6rem;
-  }
+  .container > :first-child { margin-top: 48px; }
 
-  .section-grid {
-    grid-template-columns: 1fr;
-  }
+  h1 { font-size: var(--step-3); }
+  h2 { margin-top: 48px; }
 
-  .curator-card {
-    padding: 1rem 1.25rem;
-  }
+  .section-grid { grid-template-columns: 1fr; }
 
-  .start-box {
-    padding: 1rem 1.25rem;
-  }
+  .start-box { padding: 24px; }
 
-  table {
-    font-size: 0.85rem;
-  }
-
-  th, td {
-    padding: 0.4rem 0.6rem;
-  }
+  table { font-size: 0.8rem; }
+  th, td { padding: 8px 10px 8px 0; }
 }
