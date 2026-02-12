@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Curator Cards — Assignment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Design Curator Cards</h1>
+    <p class="subtitle">Research. Constrain. Draft. Verify. — The workflow you'll use all semester.</p>
+
+    <!-- START HERE -->
+    <div class="start-box">
+      <h2>▶ Start Here</h2>
+      <ol>
+        <li>Read this page and the <a href="https://github.com/">full README</a> (10 min)</li>
+        <li>Copy the <code>/starter</code> folder into your own repo</li>
+        <li>Fill out <code>CURATOR_NOTES.md</code> — your research thinking</li>
+        <li>Write your <code>AGENTS.md</code> — instructions for the AI</li>
+        <li>Run <a href="prompt-pack.html">exploration prompts</a> from the Prompt Pack</li>
+        <li>Draft your 3 Curator Cards using production prompts</li>
+        <li>Run a Named Expert Critique (pick one expert)</li>
+        <li>Fill out <code>CLAIMS.md</code> — verify at least 1 claim per card</li>
+        <li>Deploy to GitHub Pages</li>
+        <li>Submit your repo link in Canvas</li>
+      </ol>
+    </div>
+
+    <!-- WHAT YOU'RE BUILDING -->
+    <h2>What You're Building</h2>
+    <p>A one-page static site with <strong>3 Curator Cards</strong> — short, precise, museum-label-quality descriptions of design movements:</p>
+
+    <div class="section-grid">
+      <div class="card">
+        <h3>Card 1: Bauhaus</h3>
+        <p>1919–1933. The school that unified art, craft, and technology.</p>
+      </div>
+      <div class="card">
+        <h3>Card 2: Swiss Style</h3>
+        <p>1950s–1970s. The grid system that became the global design language.</p>
+      </div>
+      <div class="card">
+        <h3>Card 3: Reaction</h3>
+        <p>Choose: New Wave Typography <em>or</em> Grunge Typography. The rebellion against Swiss order.</p>
+      </div>
+      <div class="card">
+        <h3>Per Card Requirements</h3>
+        <ul>
+          <li>80–120 words (museum-label tone)</li>
+          <li>5 vocabulary tags (domain terms)</li>
+          <li>2 real example links</li>
+          <li>1 "Not to be confused with…" line</li>
+          <li>1 accountability note</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WHAT DOES GOOD LOOK LIKE -->
+    <h2>What "Good" Looks Like</h2>
+    <p>Here's one completed card from the <a href="../example/index.html">A-level example</a>:</p>
+
+    <div class="curator-card">
+      <h3>Bauhaus (1919–1933)</h3>
+      <div class="card-body">
+        The Bauhaus school, founded by Walter Gropius in Weimar, Germany, unified fine art, craft, and technology under one pedagogical roof. Its core principle — <em>form follows function</em> — demanded that every visual decision serve a purpose. Faculty including Moholy-Nagy, Kandinsky, and Klee developed a foundation curriculum (Vorkurs) emphasizing geometric abstraction, primary colors, and modular composition. The school's output — from typography to furniture to architecture — established the blueprint for modern design education. When the Nazis closed it in 1933, its diaspora seeded modernist thinking worldwide.
+      </div>
+      <div class="tags">
+        <span class="tag">Vorkurs</span>
+        <span class="tag">geometric abstraction</span>
+        <span class="tag">form follows function</span>
+        <span class="tag">modular grid</span>
+        <span class="tag">sans-serif typography</span>
+      </div>
+      <div class="links">
+        <strong>Examples:</strong>
+        <a href="https://www.moma.org/collection/works/189319">MoMA — Bauhaus Collection</a> ·
+        <a href="https://www.moma.org/collection/artists/399">MoMA — Walter Gropius</a>
+      </div>
+      <div class="confusion">
+        <strong>Not to be confused with</strong> Art Deco, because while both emerged in the early 20th century, Art Deco embraced ornamentation and luxury, while Bauhaus stripped design to functional essentials.
+      </div>
+      <div class="accountability">
+        <strong>Accountability:</strong> I verified the founding date and Vorkurs curriculum against MoMA's exhibition records.
+      </div>
+    </div>
+
+    <p><a href="../example/index.html">→ See the full A-level example with all 3 cards</a></p>
+
+    <!-- WORKFLOW -->
+    <h2>The Workflow: Explore → Pin → Promote</h2>
+    <div class="section-grid">
+      <div class="card">
+        <h3>1. Explore</h3>
+        <p>Use open-ended prompts to survey the territory. Concept maps, vocabulary lists, timelines. Don't trust any of it yet.</p>
+      </div>
+      <div class="card">
+        <h3>2. Pin</h3>
+        <p>Select the best AI outputs and paste them into <code>CURATOR_NOTES.md</code>. These become your reference. Discard the rest.</p>
+      </div>
+      <div class="card">
+        <h3>3. Promote</h3>
+        <p>Move pinned content into <code>AGENTS.md</code> as constraints and vocabulary. Now when you prompt for drafts, the AI works within <em>your</em> curated context.</p>
+      </div>
+      <div class="card">
+        <h3>You Decide. AI Executes.</h3>
+        <p>The human decides what's good. The AI executes within those boundaries. That's curation.</p>
+      </div>
+    </div>
+
+    <!-- PROMPT PACK -->
+    <h2>Prompt Pack</h2>
+    <p>Copy/paste prompts for every stage of the workflow. <strong><a href="prompt-pack.html">→ Open the full Prompt Pack</a></strong></p>
+
+    <!-- YOUR FILES -->
+    <h2>Your Files</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Purpose</th>
+          <th>You'll Reuse This For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>CURATOR_NOTES.md</code></td>
+          <td>Your research thinking before prompting</td>
+          <td>Museum, Business Site, Portfolio</td>
+        </tr>
+        <tr>
+          <td><code>AGENTS.md</code></td>
+          <td>Instructions you give the AI</td>
+          <td>Every project this semester</td>
+        </tr>
+        <tr>
+          <td><code>PROMPT_LOG.md</code></td>
+          <td>Record of prompts + outcomes</td>
+          <td>Debugging, process improvement</td>
+        </tr>
+        <tr>
+          <td><code>CLAIMS.md</code></td>
+          <td>Verification log for factual claims</td>
+          <td>Team accountability in museum project</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- GRADING -->
+    <h2>Grading at a Glance</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th>A (Excellent)</th>
+          <th>C (Needs Work)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Card Content</td>
+          <td>80–120 words, precise vocabulary, zero unsourced claims</td>
+          <td>Vague language, missing tags, unsourced assertions</td>
+        </tr>
+        <tr>
+          <td>Verification</td>
+          <td>CLAIMS.md is thorough, links work, confidence is honest</td>
+          <td>Missing or fake verification</td>
+        </tr>
+        <tr>
+          <td>Workflow Docs</td>
+          <td>CURATOR_NOTES shows genuine exploration; AGENTS.md is specific</td>
+          <td>Missing or copy-pasted without thought</td>
+        </tr>
+        <tr>
+          <td>Expert Critique</td>
+          <td>Ran critique, implemented feedback, documented changes</td>
+          <td>Skipped or fabricated</td>
+        </tr>
+        <tr>
+          <td>Code Quality</td>
+          <td>Clean HTML/CSS, mobile-friendly, 5+ meaningful commits</td>
+          <td>Broken, not deployed, or single "final" commit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Design Curator Cards — IS117 Prompt Design · <a href="../starter/">Starter Kit</a> · <a href="../example/">A-Level Example</a> · <a href="prompt-pack.html">Prompt Pack</a></p>
+    </div>
+
+  </div>
+</body>
+</html>

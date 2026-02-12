@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~
+.idea/
+
+# Node (in case anyone installs anything)
+node_modules/
+
+# Build artifacts
+*.log
