@@ -1,57 +1,91 @@
-# CURATOR_NOTES.md — Research Thinking
+# CURATOR NOTES
 
-> Fill this out BEFORE you start prompting. This is your thinking space.
-> "Explore → Pin → Promote": explore broadly, pin the best ideas here, then promote them to AGENTS.md.
-
----
-
-## What I Think I Know
-
-- *What do I already know (or think I know) about these movements?*
--
--
--
-
-## What I'm Unsure About
-
-- *What am I fuzzy on? What might I be wrong about?*
--
--
--
-
-## Vocabulary I Need
-
-- *What domain terms do I need to learn before I can write with authority?*
--
--
--
+```
+========================================================
+  FILL THIS OUT BEFORE YOU PROMPT.
+  THIS IS RAW THINKING. NO ONE GRADES YOUR PROSE HERE.
+  EXPLORE >>> PIN >>> PROMOTE
+========================================================
+```
 
 ---
 
-## Pinned: Concept Map (from AI)
+## WHAT I ALREADY KNOW (OR THINK I KNOW)
 
-> Run the concept map prompt from the Prompt Pack. Paste the best output here.
+```
+Write bluntly. Wrong answers are fine. That is the point.
+```
 
-*[Paste concept map here]*
+1.
+2.
+3.
 
-## Pinned: Vocabulary List (from AI)
+## WHAT I DO NOT KNOW
 
-> Run the controlled vocabulary prompt. Select the terms that are actually useful. Discard the rest.
+```
+What are you fuzzy on? What might be completely wrong?
+Be honest. Uncertainty is data.
+```
 
-*[Paste selected vocabulary here]*
+1.
+2.
+3.
 
-## Pinned: Confusions & Boundaries (from AI)
+## VOCABULARY I NEED BEFORE I CAN WRITE
 
-> Run the confusions prompt. Pin the distinctions that surprised you or corrected your assumptions.
+```
+List the domain terms you need to learn.
+If you cannot define it in one sentence, you do not know it yet.
+```
 
-*[Paste confusion/boundary notes here]*
+1.
+2.
+3.
 
 ---
 
-## My Decisions
+## PINNED: CONCEPT MAP
 
-- **Card 3 movement choice:** *[New Wave / Grunge — pick one and explain why]*
-- **Expert for critique:** *[Name — explain why this expert for this card]*
-- **Anything I changed my mind about after research:**
-  -
-  -
+```
+Source: AI-generated via Prompt Pack > Concept Map prompt.
+Paste the BEST output. Delete everything else.
+```
+
+[PASTE HERE]
+
+## PINNED: VOCABULARY
+
+```
+Source: AI-generated via Prompt Pack > Controlled Vocabulary prompt.
+Keep only the terms you will actually use. Kill the rest.
+```
+
+[PASTE HERE]
+
+## PINNED: CONFUSIONS AND BOUNDARIES
+
+```
+Source: AI-generated via Prompt Pack > Confusions prompt.
+Pin the distinctions that surprised you or corrected you.
+```
+
+[PASTE HERE]
+
+---
+
+## DECISIONS
+
+| Decision | Your Answer |
+|---|---|
+| Card 3 movement | [New Wave / Grunge — pick one, say why] |
+| Expert for critique | [Name — say why this expert for this card] |
+
+## THINGS I CHANGED MY MIND ABOUT
+
+```
+After research, what did you reverse on? If nothing, you were not
+paying attention or you already knew everything. Pick one.
+```
+
+1.
+2.

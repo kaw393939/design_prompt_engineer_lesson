@@ -1,141 +1,129 @@
 /* ============================================
-   Design Curator Cards — Docs
-   International Typographic Style
-   After Müller-Brockmann: mathematical grid,
-   Helvetica, asymmetric layout, objective form
+   DESIGN CURATOR CARDS — DOCS
+   BRUTALIST WEB DESIGN
+   Raw structure. No polish. No apologies.
    ============================================ */
 
-/* --- Typographic Scale (base 16 px, ratio ~1.333) --- */
 :root {
-  --step-0: 1rem;        /* 16 px — body */
-  --step-1: 1.333rem;    /* 21.3 px */
-  --step-2: 1.777rem;    /* 28.4 px */
-  --step-3: 2.369rem;    /* 37.9 px */
-  --step-4: 3.157rem;    /* 50.5 px */
-
-  /* Colour: black, white, one signal red */
-  --black: #0a0a0a;
+  --black: #000000;
   --white: #ffffff;
-  --grey-100: #f5f5f5;
-  --grey-200: #e5e5e5;
-  --grey-400: #999;
-  --grey-600: #555;
-  --red: #e20613;            /* Swiss signal red */
-
-  /* Grid */
-  --col: 60px;
-  --gutter: 24px;
-  --margin: clamp(24px, 5vw, 80px);
-  --max-width: 960px;        /* 12-col × 60 + 11-gut × 24 */
-
-  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-mono: "SF Mono", "Fira Code", Menlo, monospace;
+  --off-white: #f0f0f0;
+  --grey: #cccccc;
+  --yellow: #ffff00;
+  --font: "Courier New", Courier, monospace;
+  --border: 4px solid var(--black);
+  --border-thin: 2px solid var(--black);
+  --border-dashed: 2px dashed var(--black);
 }
 
-/* --- Reset --- */
+/* --- RESET --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  font-size: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+html { font-size: 100%; }
 
 body {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: var(--step-0);
-  line-height: 1.5;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--black);
   background: var(--white);
   margin: 0;
   padding: 0;
 }
 
-/* --- Page Grid --- */
+/* --- CONTAINER --- */
 .container {
-  max-width: var(--max-width);
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 var(--margin);
+  padding: 20px;
+  border-left: var(--border);
+  border-right: var(--border);
+  min-height: 100vh;
 }
 
-/* Vertical rhythm: 96 px top margin before content */
-.container > :first-child { margin-top: 96px; }
-
-/* --- Typography — Müller-Brockmann hierarchy --- */
+/* --- TYPOGRAPHY --- */
 h1 {
-  font-size: var(--step-4);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 12px;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  margin-bottom: 20px;
+  padding: 40px 0 20px;
+  border-bottom: 8px solid var(--black);
 }
 
 h2 {
-  font-size: var(--step-1);
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
   text-transform: uppercase;
-  margin-top: 72px;
-  margin-bottom: 24px;
-  padding-bottom: 8px;
-  border-bottom: 3px solid var(--black);
+  letter-spacing: 4px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: var(--black);
+  color: var(--white);
 }
 
 h3 {
-  font-size: var(--step-0);
+  font-size: 18px;
   font-weight: 700;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin-top: 36px;
-  margin-bottom: 12px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: var(--border-thin);
 }
 
 p {
-  max-width: 60ch;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
+  max-width: none;
 }
 
 strong { font-weight: 700; }
 em { font-style: italic; }
 
-/* --- Links — red, no underline until hover --- */
+/* --- LINKS --- */
 a {
-  color: var(--red);
+  color: var(--black);
   text-decoration: none;
+  background: var(--yellow);
+  padding: 0 4px;
+  border-bottom: 2px solid var(--black);
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  background: var(--black);
+  color: var(--yellow);
 }
 
-/* --- Subtitle --- */
+/* --- SUBTITLE --- */
 .subtitle {
-  font-size: var(--step-1);
+  font-size: 20px;
   font-weight: 400;
-  color: var(--grey-600);
-  margin-bottom: 48px;
-  max-width: 50ch;
-  line-height: 1.4;
+  margin-bottom: 30px;
+  padding: 16px;
+  border: var(--border-dashed);
+  background: var(--off-white);
 }
 
-/* --- Start Here — heavy black border, no decoration --- */
+/* --- START BOX --- */
 .start-box {
-  border: 3px solid var(--black);
-  padding: 36px 36px 24px;
-  margin: 48px 0 60px;
+  border: 6px solid var(--black);
+  padding: 20px;
+  margin: 30px 0 40px;
+  background: var(--off-white);
 }
 
 .start-box h2 {
   margin-top: 0;
-  margin-bottom: 18px;
-  padding-bottom: 0;
-  border-bottom: none;
-  font-size: var(--step-0);
+  margin-bottom: 16px;
+  padding: 6px 10px;
+  font-size: 18px;
+  background: var(--yellow);
   color: var(--black);
+  letter-spacing: 6px;
 }
 
 .start-box ol {
@@ -144,146 +132,194 @@ a:hover {
 }
 
 .start-box li {
-  margin-bottom: 6px;
-  line-height: 1.5;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  padding: 4px 0;
+  border-bottom: 1px dashed var(--grey);
 }
 
-/* --- Section Grid — 2 columns, strict gutter --- */
+.start-box li:last-child {
+  border-bottom: none;
+}
+
+/* --- SECTION GRID --- */
 .section-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--gutter);
-  margin: 36px 0;
+  gap: 0;
+  margin: 24px 0;
 }
 
-/* --- Cards (info blocks) --- */
+/* --- CARDS --- */
 .card {
-  border-top: 3px solid var(--black);
-  padding: 24px 0 12px;
-  background: transparent;
+  border: var(--border-thin);
+  padding: 20px;
+  background: var(--white);
 }
 
 .card h3 {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: none;
+  font-size: 14px;
+  background: var(--black);
+  color: var(--white);
+  padding: 6px 10px;
+  letter-spacing: 3px;
+}
+
+.card p {
+  font-size: 14px;
 }
 
 .card ul {
   padding-left: 18px;
+  font-size: 14px;
 }
 
 .card li {
   margin-bottom: 4px;
 }
 
-/* --- Curator Card (example exhibit) --- */
+/* --- CURATOR CARD (EXAMPLE) --- */
 .curator-card {
-  border-top: 3px solid var(--red);
-  padding: 30px 0 18px;
-  margin: 36px 0 48px;
-  background: transparent;
+  border: 6px solid var(--black);
+  padding: 24px;
+  margin: 30px 0 40px;
+  background: var(--off-white);
+  position: relative;
+}
+
+.curator-card::before {
+  content: "EXAMPLE";
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  padding: 2px 12px;
+  border: var(--border-thin);
 }
 
 .curator-card h3 {
-  font-size: var(--step-1);
-  font-weight: 700;
+  font-size: 22px;
   text-transform: none;
-  letter-spacing: -0.01em;
-  margin-top: 0;
-  margin-bottom: 18px;
+  letter-spacing: 0;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid var(--black);
 }
 
 .curator-card .card-body {
-  font-size: var(--step-0);
-  line-height: 1.65;
-  margin-bottom: 24px;
-  max-width: 60ch;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 
 .curator-card .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 18px 0;
+  gap: 0;
+  margin: 16px 0;
 }
 
 .curator-card .tag {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: var(--grey-100);
-  padding: 4px 10px;
-  border: 1px solid var(--grey-200);
+  letter-spacing: 2px;
+  background: var(--black);
+  color: var(--white);
+  padding: 6px 12px;
+  border: 1px solid var(--black);
 }
 
 .curator-card .links,
 .curator-card .confusion,
 .curator-card .accountability {
-  font-size: 0.9rem;
-  line-height: 1.55;
-  margin: 8px 0;
-  color: var(--grey-600);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding: 8px 0;
+}
+
+.curator-card .links {
+  border-top: var(--border-dashed);
+  padding-top: 14px;
 }
 
 .curator-card .confusion {
-  font-style: italic;
+  font-style: normal;
+  padding: 10px;
+  border: var(--border-dashed);
+  background: var(--white);
 }
 
 .curator-card .accountability {
-  border-top: 1px solid var(--grey-200);
-  padding-top: 12px;
-  margin-top: 18px;
+  border-top: var(--border-thin);
+  padding-top: 14px;
+  margin-top: 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* --- Warning Box --- */
+/* --- WARNING --- */
 .warning {
-  border-left: 4px solid var(--red);
-  padding: 18px 24px;
-  margin: 36px 0;
-  background: var(--grey-100);
-  font-size: 0.9rem;
-  line-height: 1.55;
+  border: 4px solid var(--black);
+  padding: 16px 20px;
+  margin: 30px 0;
+  background: var(--yellow);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .warning strong {
-  color: var(--red);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
 }
 
-/* --- Code --- */
+/* --- CODE --- */
 code {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  background: var(--grey-100);
+  font-family: var(--font);
+  font-size: 14px;
+  background: var(--yellow);
   padding: 2px 6px;
+  border: 1px solid var(--black);
 }
 
 pre {
-  background: var(--grey-100);
-  border-left: 3px solid var(--grey-200);
-  padding: 24px;
+  background: var(--black);
+  color: var(--white);
+  padding: 20px;
   overflow-x: auto;
-  margin: 18px 0;
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+  margin: 16px 0;
+  font-size: 14px;
   line-height: 1.5;
+  border: none;
 }
 
 pre code {
   background: none;
+  border: none;
+  color: var(--white);
   padding: 0;
 }
 
-/* --- Prompt Block --- */
+/* --- PROMPT BLOCK --- */
 .prompt-block {
-  background: var(--grey-100);
-  border-left: 3px solid var(--black);
-  padding: 24px;
-  margin: 18px 0;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  background: var(--off-white);
+  border: var(--border-thin);
+  border-left: 8px solid var(--black);
+  padding: 20px;
+  margin: 16px 0;
+  font-size: 14px;
   line-height: 1.6;
   white-space: pre-wrap;
   position: relative;
@@ -291,80 +327,100 @@ pre code {
 
 .prompt-block .label {
   display: inline-block;
-  background: var(--black);
-  color: var(--white);
-  font-family: var(--font-body);
-  font-size: 0.65rem;
+  background: var(--yellow);
+  color: var(--black);
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 3px 8px;
-  margin-bottom: 12px;
+  letter-spacing: 4px;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  border: var(--border-thin);
 }
 
-/* --- Tables — Müller-Brockmann: rules top and bottom, no vertical lines --- */
+/* --- TABLES --- */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 24px 0;
-  font-size: 0.9rem;
+  margin: 20px 0;
+  font-size: 14px;
 }
 
 th, td {
   text-align: left;
-  padding: 10px 16px 10px 0;
-  border-bottom: 1px solid var(--grey-200);
+  padding: 10px 14px;
+  border: var(--border-thin);
   vertical-align: top;
 }
 
 th {
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--grey-400);
-  border-bottom: 2px solid var(--black);
+  letter-spacing: 3px;
+  background: var(--black);
+  color: var(--white);
 }
 
-tr:last-child td {
-  border-bottom: 2px solid var(--black);
-}
-
-/* --- Lists --- */
+/* --- LISTS --- */
 ul, ol {
-  padding-left: 20px;
-  margin-bottom: 18px;
+  padding-left: 24px;
+  margin-bottom: 16px;
 }
 
 li {
   margin-bottom: 6px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* --- Footer --- */
+/* --- FOOTER --- */
 .footer {
-  margin-top: 96px;
-  padding: 24px 0;
-  border-top: 3px solid var(--black);
-  font-size: 0.8rem;
-  color: var(--grey-600);
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 8px solid var(--black);
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 4px;
+  background: var(--black);
+  color: var(--white);
 }
 
-/* --- Responsive: single column below 640 px --- */
+.footer a {
+  color: var(--yellow);
+  background: none;
+  border-bottom: 1px solid var(--yellow);
+  padding: 0;
+}
+
+.footer a:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+/* --- RESPONSIVE --- */
 @media (max-width: 640px) {
-  :root { --margin: 20px; }
+  .container {
+    border-left: none;
+    border-right: none;
+    padding: 16px;
+  }
 
-  .container > :first-child { margin-top: 48px; }
+  h1 {
+    font-size: 40px;
+    letter-spacing: -2px;
+    padding-top: 24px;
+  }
 
-  h1 { font-size: var(--step-3); }
-  h2 { margin-top: 48px; }
+  h2 {
+    margin-top: 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
 
   .section-grid { grid-template-columns: 1fr; }
 
-  .start-box { padding: 24px; }
+  .start-box { padding: 16px; }
 
-  table { font-size: 0.8rem; }
-  th, td { padding: 8px 10px 8px 0; }
+  table { font-size: 12px; }
+  th, td { padding: 8px 10px; }
 }
