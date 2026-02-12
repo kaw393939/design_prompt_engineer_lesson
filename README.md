@@ -34,6 +34,17 @@ Three ideas that will change how you work:
 
 > **This workflow — research → constrain → draft → verify — is the same workflow you'll use for every project this semester: the Design Museum, your Business Web Presence, and your Personal Portfolio. Learn it now on safe content.**
 
+### Tools You Can Use
+
+This assignment works with any AI-powered coding environment. Use whichever you have access to:
+
+- **VS Code + GitHub Copilot** (recommended — you already have this)
+- **Cursor**
+- **Windsurf**
+- **ChatGPT, Claude, or Gemini** (for research prompts and critique — paste results into your files)
+
+You may use multiple tools. What matters is the **workflow and the documentation**, not which tool generated the output.
+
 ---
 
 ## B) Learning in Motion: The Autodidactic Loop
@@ -64,7 +75,7 @@ Build a **one-page static site** with **3 Curator Cards**:
 
 ### Each Card Must Include:
 
-- **80–120 words** of museum-label-quality prose
+- **80–120 words of body text** (museum-label-quality prose — word count applies to the description paragraph only, not tags/links/meta)
 - **5 vocabulary tags** (domain terms, not vibes — `grid`, not `cool`)
 - **2 real example links** (museums, archives, or credited design collections)
 - **1 "Not to be confused with" sentence:** *"Not to be confused with ___ because ___."*
@@ -154,22 +165,35 @@ Before submitting, confirm every box:
 - [ ] `CURATOR_NOTES.md` shows your research thinking
 - [ ] `AGENTS.md` contains your AI instructions
 - [ ] `PROMPT_LOG.md` has at least 3 logged prompts
-- [ ] `CLAIMS.md` has at least 1 verified claim per card
-- [ ] At least 5 meaningful git commits with descriptive messages
+- [ ] `CLAIMS.md` has at least 1 verified claim per card + reflection paragraph
+- [ ] Images (if any) have `alt` text; page uses semantic HTML (`<article>`, `<header>`, etc.)
+- [ ] At least 5 meaningful git commits with descriptive messages (see guide below)
 - [ ] `README_STUDENT.md` includes your reflection
+
+### When to Commit
+
+Don't save everything for one final commit. Commit after each phase:
+
+1. `add starter files and initial CURATOR_NOTES` (after research)
+2. `fill AGENTS.md with vocabulary and constraints` (after exploration)
+3. `add first draft of 3 curator cards` (after production prompts)
+4. `revise cards after expert critique` (after critique phase)
+5. `verify claims and finalize` (after verification)
+
+This habit is essential for the team Design Museum project, where your commits are your contribution record.
 
 ---
 
 ## H) Grading Rubric
 
-| Criterion | A (Excellent) | B (Solid) | C (Needs Work) |
-|-----------|--------------|-----------|----------------|
-| **Card Content** | 80–120 words, museum-label tone, precise vocabulary, zero unsourced claims | Minor word count variance, mostly accurate, vocabulary is functional | Vague language, missing tags, unsourced assertions |
-| **Verification** | CLAIMS.md is thorough, links work, confidence levels are honest | Claims exist but sparse or surface-level | Missing or fake verification |
-| **Workflow Docs** | CURATOR_NOTES shows genuine exploration; AGENTS.md is specific and reusable | Docs exist but feel perfunctory | Missing or copy-pasted without thought |
-| **Expert Critique** | Ran critique, implemented feedback, documented changes | Ran critique but didn't act on it | Skipped or fabricated |
-| **Code Quality** | Clean HTML/CSS, mobile-friendly, deployed, 5+ meaningful commits | Works but messy, few commits | Broken, not deployed, or single "final" commit |
-| **Reflection** | Identifies a specific AI claim they challenged with evidence | Generic reflection ("AI was helpful") | Missing |
+| Criterion | Weight | A (Excellent) | B (Solid) | C (Needs Work) |
+|-----------|--------|--------------|-----------|----------------|
+| **Card Content** | 30% | 80–120 words (body text), museum-label tone, precise vocabulary, zero unsourced claims | Minor word count variance, mostly accurate, vocabulary is functional | Vague language, missing tags, unsourced assertions |
+| **Verification** | 20% | CLAIMS.md is thorough, links work, confidence levels are honest | Claims exist but sparse or surface-level | Missing or fake verification |
+| **Workflow Docs** | 15% | CURATOR_NOTES shows genuine exploration; AGENTS.md is specific and reusable | Docs exist but feel perfunctory | Missing or copy-pasted without thought |
+| **Expert Critique** | 15% | Ran critique, implemented feedback, documented changes | Ran critique but didn't act on it | Skipped or fabricated |
+| **Code Quality** | 10% | Clean HTML/CSS, accessible, mobile-friendly, deployed, 5+ meaningful commits | Works but messy, few commits | Broken, not deployed, or single "final" commit |
+| **Reflection** | 10% | Identifies a specific AI claim they challenged with evidence | Generic reflection ("AI was helpful") | Missing |
 
 ---
 

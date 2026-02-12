@@ -28,4 +28,5 @@
 - [ ] `AGENTS.md` has 15+ vocabulary terms defined
 - [ ] `PROMPT_LOG.md` has 3+ logged prompts
 - [ ] `CLAIMS.md` has 1+ verified claim per card + reflection
+- [ ] Images (if any) have `alt` text
 - [ ] 5+ meaningful git commits
